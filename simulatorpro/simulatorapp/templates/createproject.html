@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>LogIn page</title>
+    <title>craete project</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
@@ -12,74 +12,98 @@
     <!-- {% load statics %}   -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <!-- <link rel="stylesheet" href="{% static 'css/loginapge.css' %}"/>   -->
-    <link rel="stylesheet" href="../static/css/loginapge.css">
-    <link rel="stylesheet" href="../static/css/project.css">
-
+    <link rel="stylesheet" href="../static/css/loginapge.css" />
+    <link rel="stylesheet" href="../static/css/project.css" />
+    
   </head>
   <body>
     <script>
-      $(document).ready(function () {
-        $("#res").click(function () {
-          $(".test").slideToggle("slow");
-        });
-      });
+       $(document).ready(function () {
+            $(".user-btn").click(function () {
+              $(".user-info-container").slideToggle("slow");
+            });
+          });
     </script>
+
     <div class="project-container">
       <header class="header">
         <div class="logoset">
-        <a class="logo">Logo</a>
-      </div>
-      <nav class="navigation">
-        <a href="#">
-          <span>components</span>
-        </a>
+          <a class="logo">Logo</a>
+        </div>
+        <nav class="navigation">
+          <a href="#">
+            <span>components</span>
+          </a>
 
-        <a href="#">
-          <span>Projects</span>
-        </a>
-        
-        <a href="#">
-          <span>Classroom</span>
-        </a>
-        
-        <a href="#">
-          <span>Learning center</span>
-        </a>
-        <a href="#">
-          <span id="res">Resources</span>
-        </a>
-      </nav>
-      <ul class="test">
-        <li>
           <a href="#">
-            <span>Blogs</span>
+            <span>Projects</span>
           </a>
-        </li>
-        <li>
+
           <a href="#">
-            <span>Tips & Tricks</span>
+            <span>Classroom</span>
           </a>
-        </li>
-        <li>
+
           <a href="#">
-            <span>Lesson plans</span>
+            <span>Learning center</span>
           </a>
-        </li>
-        <li>
           <a href="#">
-            <span>Help center</span>
+            <span id="res">Resources</span>
           </a>
-        </li>
-      </ul>
-      <div class="loginbtn">
-        <button class="Loginbtn-popup">Log In</button>
-        <button class="SignInbtn-popup">Sign In</button>
+        </nav>
+        <ul class="test">
+          <li>
+            <a href="#">
+              <span>Blogs</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span>Tips & Tricks</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span>Lesson plans</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span>Help center</span>
+            </a>
+          </li>
+        </ul>
+        <!-- for user account -->
+        <div class="input-user">
+          <input type="text" value="   Search..." id="search-box" />
+          <label for="search-box">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </label>
+          <button class="user-btn"><i class="fa-solid fa-user"></i></button>
+        </div>
+      </header>
+      <div class="user-info-container">
+        <a href="#">
+          <li class="xyz"><i class="fa-solid fa-user"></i><span> name</span></li>
+        </a>
+        <hr />
+        <a href="#">
+          <li class="xyz"><i class="fa-solid fa-plus"></i><span> New Design</span></li>
+        </a>
+        <a href="#">
+          <li class="xyz"><i class="fa-solid fa-cubes"></i><span> My Design</span></li>
+        </a>
+        <a href="#">
+          <li class="xyz"><i class="fa-solid fa-envelope"></i><span> Notifications</span></li>
+        </a>
+        <a href="#">
+          <li class="xyz"><i class="fa-solid fa-gear"></i><span>Profile</span></li>
+        </a>
+        <a href="#">
+          <li class="xyz"><i class="fa-solid fa-circle-xmark"></i><span>Log Out</span></li>
+        </a>
       </div>
-    </header>
-   
     </div>
-  </div>
+    <!-- section for components -->
     <script src="../static/js/loginpage.js"></script>
   </body>
-  </html>
-  
+</html>

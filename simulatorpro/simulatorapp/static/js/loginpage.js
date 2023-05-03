@@ -25,16 +25,26 @@
         icon.addEventListener('click',()=>{
             wrapper.classList.remove('active-popup');
         });
-
         
-        // <a id="res" href="#">
-        // <span>Resources</span>
-        //         <li class="test">gdfdhd</li>
-        //         <li class="test">gdfdhd</li>
-        //         <li class="test">gdfdhd</li>
+        // for resources in loginpage
+        $(document).ready(function () {
+            $("#res").click(function () {
+              $(".test").slideToggle(" slow");
+            });
+          });
 
-        // <a href="#">components</a>
-        //     <a href="#">Projects</a>
-        //     <a href="#">Classroom</a>
-        //     <a href="#">Learning center</a>
-        //     <a href="#">Resources</a>
+
+        //   for user account details
+        // $(document).ready(function () {
+        //     $(".user-btn").click(function () {
+        //       $(".user-info-container").slideToggle("slow");
+        //     });
+        //   });
+
+        // $(document).ready(function(){
+        //     $(".user-btn").click(function(){
+        //         $(".user-info-container").animate({
+        //             width: "toggle"
+        //         });
+        //     });
+        // });
