@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LogIn page</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    />
+    <!-- {% load statics %}   -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <!-- <link rel="stylesheet" href="{% static 'css/loginapge.css' %}"/>   -->
+    <link rel="stylesheet" href="../static/css/loginapge.css">
+    <link rel="stylesheet" href="../static/css/project.css">
+
+  </head>
+  <body>
+    <script>
+      $(document).ready(function () {
+        $("#res").click(function () {
+          $(".test").slideToggle("slow");
+        });
+      });
+    </script>
+    <div class="project-container">
+      <header class="header">
+        <div class="logoset">
+        <a class="logo">Logo</a>
+      </div>
+      <nav class="navigation">
+        <a href="#">
+          <span>components</span>
+        </a>
+
+        <a href="#">
+          <span>Projects</span>
+        </a>
+        
+        <a href="#">
+          <span>Classroom</span>
+        </a>
+        
+        <a href="#">
+          <span>Learning center</span>
+        </a>
+        <a href="#">
+          <span id="res">Resources</span>
+        </a>
+      </nav>
+      <ul class="test">
+        <li>
+          <a href="#">
+            <span>Blogs</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span>Tips & Tricks</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span>Lesson plans</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span>Help center</span>
+          </a>
+        </li>
+      </ul>
+      <div class="loginbtn">
+        <button class="Loginbtn-popup">Log In</button>
+        <button class="SignInbtn-popup">Sign In</button>
+      </div>
+    </header>
+   
+    </div>
+  </div>
+    <script src="../static/js/loginpage.js"></script>
+  </body>
+  </html>
+  
