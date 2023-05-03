@@ -12,12 +12,19 @@
     <!-- {% load statics %}   -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <!-- <link rel="stylesheet" href="{% static 'css/loginapge.css' %}"/>   -->
-    <link rel="stylesheet" href="../static/css/loginapge.css" />
+    <link rel="stylesheet" href="../static/css/loginapge.mai.css" />
     <link rel="stylesheet" href="../static/css/project.css" />
-    
+    <script src="../static/js/loginpage.js"></script>
   </head>
   <body>
     <script>
+      $(document).ready(function () {
+            $(".res").click(function () {
+              $(".test").slideToggle("slow");
+            });
+          });
+
+
        $(document).ready(function () {
             $(".user-btn").click(function () {
               $(".user-info-container").slideToggle("slow");
@@ -47,9 +54,10 @@
             <span>Learning center</span>
           </a>
           <a href="#">
-            <span id="res">Resources</span>
+            <span class="res">Resources</span>
           </a>
         </nav>
+        <!-- for user account -->
         <ul class="test">
           <li>
             <a href="#">
@@ -72,7 +80,6 @@
             </a>
           </li>
         </ul>
-        <!-- for user account -->
         <div class="input-user">
           <input type="text" value="   Search..." id="search-box" />
           <label for="search-box">
@@ -102,8 +109,53 @@
           <li class="xyz"><i class="fa-solid fa-circle-xmark"></i><span>Log Out</span></li>
         </a>
       </div>
+      <div class="sidebar-user">
+        <a href="#">
+          <i class="fa-solid fa-user"></i>
+        </a>
+        <a href="#">
+          <li class="userN"><span>User_name</span></li>
+        </a>
+        <input type="text" value="   Search designs..." class="search-bar" />
+        <div class="bottum-content">
+          <a href="#">
+            <li class="xyz"><i class="fa-solid fa-envelope"></i><span>Classes</span></li>
+          </a>
+          <a href="#">
+            <li class="xyz"><i class="fa-solid fa-gear"></i><span>Designs</span></li>
+          </a>
+          <a href="#">
+          <li class="xyz"><i class="fa-solid fa-circle-xmark"></i><span>Tutorials</span></li>
+        </a>
+      </div>
+      <div class="content-image">
+        <div class="imge-box">
+          <!-- <img src="../static/images/arduino.jpeg" alt=""> -->
+        </div>
+        <div class="text">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores voluptatibus officia itaque nemo suscipit aliquam nam magnam, quaerat facilis mollitia consectetur, cum voluptates deleniti rerum dolor deserunt! Dicta, impedit! Commodi molestiae atque dolorem repudiandae praesentium, nemo, perferendis minus voluptatem nihil cum illum ipsum earum! Officia non eveniet itaque ab sint.</p>
+          <button type="next">click</button>
+        </div>
+        </div>
+        <div class="new-project-b">
+          <h2>Start a project....</h2>
+          <hr>
+          <a href="#">
+            <button id="d3" type="button"><i class="fa-solid fa-cubes"></i>3D</button>
+          </a>
+          <a href="#">
+            <button class="btnC" type="button"><i class="fa-solid fa-gear"></i>Circuits</button>
+          </a>
+          <a href="#">
+            <button class="btnC" type="button"><i class="fa-solid fa-gear"></i>Code</button>
+          </a>
+          <a href="#">
+            <button id="new-pro" type="button"><i class="fa-solid fa-plus"></i></i>New</button>
+          </a>
+        </div>
     </div>
-    <!-- section for components -->
+  </div>
+    <!-- div for create new design -->
     <script src="../static/js/loginpage.js"></script>
   </body>
 </html>
