@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>craete project</title>
+    <title>new project</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
@@ -14,6 +14,7 @@
     <!-- <link rel="stylesheet" href="{% static 'css/loginapge.css' %}"/>   -->
     <link rel="stylesheet" href="../static/css/loginapge.mai.css" />
     <link rel="stylesheet" href="../static/css/project.css" />
+    <link rel="stylesheet" href="../static/css/newproject.css">
     <script src="../static/js/loginpage.js"></script>
   </head>
   <body>
@@ -108,52 +109,60 @@
           <li class="xyz"><i class="fa-solid fa-circle-xmark"></i><span>Log Out</span></li>
         </a>
       </div>
-      <div class="sidebar-user">
-        <a href="#">
-          <i class="fa-solid fa-user"></i>
-        </a>
-        <a href="#">
-          <li class="userN"><span>User_name</span></li>
-        </a>
-        <input type="text" value="   Search designs..." class="search-bar" />
-        <div class="bottum-content">
-          <a href="#">
-            <li class="xyz"><i class="fa-solid fa-envelope"></i><span>Classes</span></li>
-          </a>
-          <a href="#">
-            <li class="xyz"><i class="fa-solid fa-gear"></i><span>Designs</span></li>
-          </a>
-          <a href="#">
-          <li class="xyz"><i class="fa-solid fa-circle-xmark"></i><span>Tutorials</span></li>
-        </a>
+      <div class="right-container">
+         <input type="text" value="   Search designs..." class="search-component" />
+         <div class="component-box">
+            <div class="img-box"><img src="../static/images/ball switch.jpg" alt=""></div>
+            <div class="img-box"><img src="../static/images/minireed.jpg" alt=""></div>
+            <div class="img-box"><img src="../static/images/56-561516_soda-can-png.jpg" alt=""></div>
+            <div class="img-box"></div>
+            <div class="img-box"></div>
+            <div class="img-box"></div>
+        </div>
       </div>
-      <div class="content-image">
-        <div class="imge-box">
-          <!-- <img src="../static/images/arduino.jpeg" alt=""> -->
-        </div>
-        <div class="text">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores voluptatibus officia itaque nemo suscipit aliquam nam magnam, quaerat facilis mollitia consectetur, cum voluptates deleniti rerum dolor deserunt! Dicta, impedit! Commodi molestiae atque dolorem repudiandae praesentium, nemo, perferendis minus voluptatem nihil cum illum ipsum earum! Officia non eveniet itaque ab sint.</p>
-          <button type="next">click</button>
-        </div>
-        </div>
-        <div class="new-project-b">
-          <h2>Start a project....</h2>
-          <hr>
-          <a href="#">
-            <button id="d3" type="button"><i class="fa-solid fa-cubes"></i>3D</button>
-          </a>
-          <a href="#">
-            <button class="btnC" type="button"><i class="fa-solid fa-gear"></i>Circuits</button>
-          </a>
-          <a href="#">
-            <button class="btnC" type="button"><i class="fa-solid fa-gear"></i> Code</button>
-          </a>
-          <a href="../templates/newproject.html">
-            <button id="new-pro" type="button"><i class="fa-solid fa-plus"></i> </i> New</button>
-          </a>
-        </div>
+     
+        
     </div>
   </div>
+  <script>
+    var width = window.innerWidth;
+    var height = window.innerHeight;
+
+    function drawImage(imageObj) {
+      var stage = new Konva.Stage({
+        container: 'img-box',
+        width: width,
+        height: height,
+      });
+
+      var layer = new Konva.Layer();
+      // darth vader
+      var darthVaderImg = new Konva.Image({
+        image: imageObj,
+        x: stage.width() / 2 - 200 / 2,
+        y: stage.height() / 2 - 137 / 2,
+        width: 200,
+        height: 137,
+        draggable: true,
+      });
+
+      // add cursor styling
+      darthVaderImg.on('mouseover', function () {
+        document.body.style.cursor = 'pointer';
+      });
+      darthVaderImg.on('mouseout', function () {
+        document.body.style.cursor = 'default';
+      });
+
+      layer.add(darthVaderImg);
+      stage.add(layer);
+    }
+    var imageObj = new Image();
+    imageObj.onload = function () {
+      drawImage(this);
+    };
+    imageObj.src = '../static/images/arduino.jpeg';
+  </script>
     <!-- div for create new design -->
     <script src="../static/js/loginpage.js"></script>
   </body>

@@ -6,6 +6,7 @@
         body{
             margin: 0;
             padding: 0;
+            overflow: hidden;
         }
         .main-container{
             margin: 0;
@@ -84,7 +85,7 @@
         ul.test{
             display: block;
             position: relative;
-            left: 802px ;
+            left: 790px ;
             top: 40px ;
             display: none;
         }

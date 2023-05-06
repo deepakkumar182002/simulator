@@ -23,7 +23,7 @@ body{
 }
 .header{
     width:100%;
-    height: auto;
+    /* height: 100px; */
     top: 0px;
     left: 0px;
     position:fixed;
@@ -191,6 +191,10 @@ ul.test li a{
     top: 85px;
     z-index: 900;
 }
+.user-info-container a .N-M{
+    background: #17154f;
+    border-radius: 10px 10px 0px 0px ;
+}
 .user-info-container a{
     font-size: 25px;
     color: #fff;
@@ -262,6 +266,7 @@ ul.test li a{
     outline: none;
     box-shadow:none;
     color: #77797b;
+    background: #ebebeba4;
 }
 .bottum-content{
     width: 100%;
@@ -333,6 +338,9 @@ ul.test li a{
     font-size: 25px;
     background: transparent;
 }
+.content-image .text button:hover{
+    background: #7f7f7f33;
+}
 .new-project-b{
     background:#d8d6d4;
     width:1120px;
@@ -387,6 +395,9 @@ hr{
     background: #4440c9;
     border-radius: 30px;
     color: #fff;
+}
+.new-project-b #new-pro:active{
+    opacity: 80%;
 }
 
 
