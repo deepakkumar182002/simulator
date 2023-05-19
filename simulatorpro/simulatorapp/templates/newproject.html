@@ -1,169 +1,303 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>new project</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
-    />
-    <!-- {% load statics %}   -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <!-- <link rel="stylesheet" href="{% static 'css/loginapge.css' %}"/>   -->
-    <link rel="stylesheet" href="../static/css/loginapge.mai.css" />
-    <link rel="stylesheet" href="../static/css/project.css" />
-    <link rel="stylesheet" href="../static/css/newproject.css">
-    <script src="../static/js/loginpage.js"></script>
-  </head>
-  <body>
-    <script>
-      $(document).ready(function () {
-            $(".res").click(function () {
-              $(".test").slideToggle("slow");
-            });
-          });
-
-
-       $(document).ready(function () {
-            $(".user-btn").click(function () {
-              $(".user-info-container").slideToggle("slow");
-            });
-          });
-    </script>
-
-    <div class="project-container">
-      <header class="header">
-        <div class="logoset">
-          <a href="../templates/loginpage.html" class="logo">Logo</a>
-        </div>
-        <nav class="navigation">
-          <a href="#">
-            <span>components</span>
-          </a>
-
-          <a href="#">
-            <span>Projects</span>
-          </a>
-
-          <a href="#">
-            <span>Classroom</span>
-          </a>
-
-          <a href="#">
-            <span>Learning center</span>
-          </a>
-          <a href="#">
-            <span class="res">Resources</span>
-          </a>
-        </nav>
-        <!-- for user account -->
-        <ul class="test">
-          <li>
-            <a href="#">
-              <span>Blogs</span>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <span>Tips & Tricks</span>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <span>Lesson plans</span>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <span>Help center</span>
-            </a>
-          </li>
-        </ul>
-        <div class="input-user">
-          <input type="text" value="   Search..." id="search-box" />
-          <label for="search-box">
-            <i class="fa-solid fa-magnifying-glass"></i>
-          </label>
-          <button class="user-btn"><i class="fa-solid fa-user"></i></button>
-        </div>
-      </header>
-      <div class="user-info-container">
-        <a href="#">
-          <li class="N-M"><i class="fa-solid fa-user"></i><span> name</span></li>
-        </a>
-        <a href="#">
-          <li class="xyz"><i class="fa-solid fa-plus"></i><span> New Design</span></li>
-        </a>
-        <a href="#">
-          <li class="xyz"><i class="fa-solid fa-cubes"></i><span> My Design</span></li>
-        </a>
-        <a href="#">
-          <li class="xyz"><i class="fa-solid fa-envelope"></i><span> Notifications</span></li>
-        </a>
-        <a href="#">
-          <li class="xyz"><i class="fa-solid fa-gear"></i><span>Profile</span></li>
-        </a>
-        <a href="#">
-          <li class="xyz"><i class="fa-solid fa-circle-xmark"></i><span>Log Out</span></li>
-        </a>
-      </div>
-      <div class="right-container">
-         <input type="text" value="   Search designs..." class="search-component" />
-         <div class="component-box">
-            <div class="img-box"><img src="../static/images/ball switch.jpg" alt=""></div>
-            <div class="img-box"><img src="../static/images/minireed.jpg" alt=""></div>
-            <div class="img-box"><img src="../static/images/56-561516_soda-can-png.jpg" alt=""></div>
-            <div class="img-box"></div>
-            <div class="img-box"></div>
-            <div class="img-box"></div>
-        </div>
-      </div>
-     
-        
-    </div>
-  </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>new project</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
+  <!-- {% load statics %}   -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <!-- <link rel="stylesheet" href="{% static 'css/loginapge.css' %}"/>   -->
+  <link rel="stylesheet" href="../static/css/loginapge.mai.css" />
+  <!-- <link rel="stylesheet" href="../static/css/createproject.css" /> -->
+  <link rel="stylesheet" href="../static/css/newproject.css">
+  <script src="../static/js/loginpage.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+</head>
+<body>
   <script>
-    var width = window.innerWidth;
-    var height = window.innerHeight;
+    $(document).ready(function () {
+      $(".res").click(function () {
+        $(".test").slideToggle("slow");
+      });
+    });
 
-    function drawImage(imageObj) {
-      var stage = new Konva.Stage({
-        container: 'img-box',
-        width: width,
-        height: height,
+
+    $(document).ready(function () {
+      $(".user-btn").click(function () {
+        $(".user-info-container").slideToggle("slow");
+      });
+    });
+    // for right containerbtn direction changement
+    $(document).ready(function () {
+      $(".fa-rotate-270").click(function () {
+        $(".fa-rotate-90").toggle("show");
+      });
+    });
+    $(document).ready(function () {
+      $(".fa-rotate-270").click(function () {
+        $(".fa-rotate-90").show();
+      });
+      $(".fa-rotate-90").click(function () {
+        $(".fa-rotate-90").hide();
       });
 
-      var layer = new Konva.Layer();
-      // darth vader
-      var darthVaderImg = new Konva.Image({
-        image: imageObj,
-        x: stage.width() / 2 - 200 / 2,
-        y: stage.height() / 2 - 137 / 2,
-        width: 200,
-        height: 137,
-        draggable: true,
+      $(".fa-rotate-270").click(function () {
+        $(".right-container").animate({
+          width: "toggle"
+        });
       });
+      $(".fa-rotate-90").click(function () {
+        $(".right-container").animate({
+          width: "toggle"
+        });
+      });
+    });
 
-      // add cursor styling
-      darthVaderImg.on('mouseover', function () {
-        document.body.style.cursor = 'pointer';
-      });
-      darthVaderImg.on('mouseout', function () {
-        document.body.style.cursor = 'default';
-      });
 
-      layer.add(darthVaderImg);
-      stage.add(layer);
-    }
-    var imageObj = new Image();
-    imageObj.onload = function () {
-      drawImage(this);
-    };
-    imageObj.src = '../static/images/arduino.jpeg';
+
   </script>
-    <!-- div for create new design -->
-    <script src="../static/js/loginpage.js"></script>
-  </body>
+
+  <div class="project-container">
+    <header class="header">
+      <div class="logoset">
+        <a href="../templates/loginpage.html" class="logo">Logo</a>
+      </div>
+      <nav class="navigation">
+        <a href="#">
+          <span>components</span>
+        </a>
+
+        <a href="#">
+          <span>Projects</span>
+        </a>
+
+        <a href="#">
+          <span>Classroom</span>
+        </a>
+
+        <a href="#">
+          <span>Learning center</span>
+        </a>
+        <a href="#">
+          <span class="res">Resources</span>
+        </a>
+      </nav>
+      <!-- for user account -->
+      <ul class="test">
+        <li>
+          <a href="#">
+            <span>Blogs</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span>Tips & Tricks</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span>Lesson plans</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span>Help center</span>
+          </a>
+        </li>
+      </ul>
+      <div class="input-user">
+        <input type="text" placeholder="  Search...." id="search-box" />
+        <label for="search-box">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </label>
+        <button class="user-btn"><i class="fa-solid fa-user"></i></button>
+      </div>
+    </header>
+    <div class="user-info-container">
+      <a href="#">
+        <li class="N-M"><i class="fa-solid fa-user"></i><span> name</span></li>
+      </a>
+      <a href="#">
+        <li class="xyz"><i class="fa-solid fa-plus"></i><span> New Design</span></li>
+      </a>
+      <a href="#">
+        <li class="xyz"><i class="fa-solid fa-cubes"></i><span> My Design</span></li>
+      </a>
+      <a href="#">
+        <li class="xyz"><i class="fa-solid fa-envelope"></i><span> Notifications</span></li>
+      </a>
+      <a href="#">
+        <li class="xyz"><i class="fa-solid fa-gear"></i><span>Profile</span></li>
+      </a>
+      <a href="#">
+        <li class="xyz"><i class="fa-solid fa-circle-xmark"></i><span>Log Out</span></li>
+      </a>
+    </div>
+    <div class="right-container">
+      <input type="text" placeholder="  Serach....." id="search-component" />
+      <label for="search-component">
+        <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
+      </label>
+
+      <div class="component-box">
+        <!-- <div class="img-box"><span>Arduino&LED</span><img class="dro" id="drage1" draggable="true" ondragstart="drag(event)" src="../static/images/FS.png" height="90" width="50" alt=""></div> -->
+        <div class="img-box"><span>Arduino&LED</span><img id="ard" src="../static/images/t725.png" height="90"
+            width="100" alt=""></div>
+        <div class="img-box"><span>sensor</span><img src="../static/images/SS.png" height="90" width="50" alt=""></div>
+        <div class="img-box"><span>sensor</span><img src="../static/images/DHT.png" height="90" width="50" alt=""></div>
+        <div class="img-box"><span>sensor</span><img src="../static/images/ic4.png" height="90" width="50" alt=""></div>
+        <div class="img-box"><span>sensor</span><img src="../static/images/photoregistor.png" height="90" width="50"
+            alt=""></div>
+        <div class="img-box"><span>sensor</span><img src="../static/images/BSWITCH.png" height="90" width="50" alt="">
+        </div>
+        <div class="img-box"><span>sensor</span><img src="../static/images/FS.png" height="90" width="50" alt=""></div>
+        <div class="img-box"><span>sensor</span><img src="../static/images/SS.png" height="90" width="50" alt=""></div>
+        <div class="img-box"><span>sensor</span><img src="../static/images/DHT.png" height="90" width="50" alt=""></div>
+        <div class="img-box"><span>sensor</span><img src="../static/images/ic4.png" height="90" width="50" alt=""></div>
+        <div class="img-box"><span>sensor</span><img src="../static/images/photoregistor.png" height="90" width="50"
+            alt=""></div>
+        <div class="img-box"><span>sensor</span><img src="../static/images/BSWITCH.png" height="90" width="50" alt="">
+        </div>
+        <div class="img-box"><span>sensor</span><img src="../static/images/ic4.png" height="90" width="50" alt=""></div>
+        <div class="img-box"><span>sensor</span><img src="../static/images/photoregistor.png" height="90" width="50"
+            alt=""></div>
+        <div class="img-box"><span>sensor</span><img src="../static/images/BSWITCH.png" height="90" width="50" alt="">
+        </div>
+        <div class="img-box"><span>sensor</span><img src="../static/images/SS.png" height="90" width="50" alt=""></div>
+        <div class="img-box"><span>sensor</span><img src="../static/images/DHT.png" height="90" width="50" alt=""></div>
+        <div class="img-box"><span>sensor</span><img src="../static/images/ic4.png" height="90" width="50" alt=""></div>
+        <div class="img-box"><span>sensor</span><img src="../static/images/photoregistor.png" height="90" width="50"
+            alt=""></div>
+        <div class="img-box"><span>sensor</span><img src="../static/images/BSWITCH.png" height="90" width="50" alt="">
+        </div>
+        <div class="img-box"><span>sensor</span><img src="../static/images/ic4.png" height="90" width="50" alt=""></div>
+        <div class="img-box"><span>sensor</span><img src="../static/images/photoregistor.png" height="90" width="50"
+            alt=""></div>
+        <div class="img-box"><span>sensor</span><img src="../static/images/BSWITCH.png" height="90" width="50" alt="">
+        </div>
+        <div class="img-box"><span>sensor</span><img src="../static/images/FS.png" height="90" width="50" alt=""></div>
+        <div class="img-box"><span>sensor</span><img src="../static/images/SS.png" height="90" width="50" alt=""></div>
+        <div class="img-box"><span>sensor</span><img src="../static/images/DHT.png" height="90" width="50" alt=""></div>
+        <div class="img-box"><span>sensor</span><img src="../static/images/ic4.png" height="90" width="50" alt=""></div>
+        <div class="img-box"><span>sensor</span><img src="../static/images/photoregistor.png" height="90" width="50"
+            alt=""></div>
+        <div class="img-box"><span>sensor</span><img src="../static/images/BSWITCH.png" height="90" width="50" alt="">
+        </div>
+        <div class="img-box"><span>sensor</span><img src="../static/images/FS.png" height="90" width="50" alt=""></div>
+        <div class="img-box"><span>sensor</span><img src="../static/images/SS.png" height="90" width="50" alt=""></div>
+        <div class="img-box"><span>sensor</span><img src="../static/images/DHT.png" height="90" width="50" alt=""></div>
+        <div class="img-box"><span>sensor</span><img src="../static/images/ic4.png" height="90" width="50" alt=""></div>
+        <div class="img-box"><span>sensor</span><img src="../static/images/photoregistor.png" height="90" width="50"
+            alt=""></div>
+        <div class="img-box"><span>sensor</span><img src="../static/images/BSWITCH.png" height="90" width="50" alt="">
+        </div>
+        <div class="img-box"><span>sensor</span><img src="../static/images/ic4.png" height="90" width="50" alt=""></div>
+        <div class="img-box"><span>sensor</span><img src="../static/images/photoregistor.png" height="90" width="50"
+            alt=""></div>
+        <div class="img-box"><span>sensor</span><img src="../static/images/BSWITCH.png" height="90" width="50" alt="">
+        </div>
+        <div class="img-box"><span>sensor</span><img src="../static/images/SS.png" height="90" width="50" alt=""></div>
+        <div class="img-box"><span>sensor</span><img src="../static/images/DHT.png" height="90" width="50" alt=""></div>
+        <div class="img-box"><span>sensor</span><img src="../static/images/ic4.png" height="90" width="50" alt=""></div>
+        <div class="img-box"><span>sensor</span><img src="../static/images/photoregistor.png" height="90" width="50"
+            alt=""></div>
+        <div class="img-box"><span>sensor</span><img src="../static/images/BSWITCH.png" height="90" width="50" alt="">
+        </div>
+        <div class="img-box"><span>sensor</span><img src="../static/images/ic4.png" height="90" width="50" alt=""></div>
+        <div class="img-box"><span>sensor</span><img src="../static/images/photoregistor.png" height="90" width="50"
+            alt=""></div>
+        <div class="img-box"><span>sensor</span><img src="../static/images/BSWITCH.png" height="90" width="50" alt="">
+        </div>
+      </div>
+    </div>
+    <i class="fa-solid fa-caret-up fa-rotate-270"></i>
+    <i class="fa-solid fa-caret-up fa-rotate-90"></i>
+  </div>
+  <div class="container" id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+    <!-- <div class="s" id="d"></div> -->
+    <div class="simu">
+      <img id="d" src="../static/images/t725.png" alt="">
+    </div>
+    <div class="simu2">
+      <img src="../static/images/ard.png" id="f" alt="">
+    </div>
+<div class="components-nav">
+  <button class="Code" type="submit">Code</button>
+  <!-- left container for codepanal -->
+  <div class="left-container">
+    
+    <textarea  name="text"  id="test" cols="30" rows="10">void setup() {
+        // initialize digital pin LED_BUILTIN as an output.
+        pinMode(12, OUTPUT);
+      }
+      
+      // the loop function runs over and over again forever
+      void loop() {
+        digitalWrite(12, HIGH);   // turn the LED on (HIGH is the voltage level)
+        delay(1000);                       // wait for a second
+        digitalWrite(12, LOW);    // turn the LED off by making the voltage LOW
+        delay(1000);                       // wait for a second
+      }</textarea>
+      <div class="btn-S">
+        <button id="Run" type="submit" onclick="z()">Run</button>
+      </div>
+    </div>
+    
+  </div>
+</div>
+</div>
+  <script>
+    // for dragable
+    $(function () {
+      // $( "#drage1" ).draggable();
+      $(".simu").draggable();
+      $(".simu2").draggable();
+    });
+    // for #arduino sho hide
+    $(document).ready(function () {
+      // $("#hide").click(function(){
+      //   $("p").hide();
+      // });
+      $("#ard").click(function () {
+        $(".simu").show();
+      });
+    });
+    // ssssssssssssssss
+    $(document).ready(function () {
+      $("#Run").click(function(){
+        $(".simu").hide();
+      });
+      $("#Run").click(function () {
+        $(".simu2").show();
+      });
+    });
+
+    // for code panale slide
+    $(document).ready(function () {
+      // $(".fa-rotate-270").click(function () {
+      //   $(".fa-rotate-90").show();
+      // });
+      // $(".fa-rotate-90").click(function () {
+      //   $(".fa-rotate-90").hide();
+      // });
+
+      $(".Code").click(function () {
+        $(".left-container").animate({
+          width: "toggle"
+        });
+      });
+      // $(".fa-rotate-90").click(function () {
+      //   $(".right-container").animate({
+      //     width: "toggle"
+      //   });
+      // });
+    });
+
+
+  </script>
+      <!-- div for create new design -->
+  <script src="../static/js/loginpage.js"></script>
+</body>
 </html>
