@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>new project</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
+  <!-- {% load statics %}   -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <!-- <link rel="stylesheet" href="{% static 'css/loginapge.css' %}"/>   -->
+  <link rel="stylesheet" href="../css/loginapge.mai.css" />
+  <!-- <link rel="stylesheet" href="../static/css/createproject.css" /> -->
+  <link rel="stylesheet" href="../css/newproject.css">
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+  <link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+</head>
+<body>
+  <script>
+    $(document).ready(function () {
+      $(".res").hover(function () {
+        $(".test").slideToggle("slow");
+      });
+    });
+
+
+    $(document).ready(function () {
+      $(".user-btn").hover(function () {
+        $(".user-info-container").slideToggle("slow");
+      });
+    });
+    // for right containerbtn direction changement
+    $(document).ready(function () {
+      $(".fa-rotate-270").click(function () {
+        $(".fa-rotate-90").toggle("show");
+      });
+    });
+    $(document).ready(function () {
+      $(".fa-rotate-270").click(function () {
+        $(".fa-rotate-90").show();
+      });
+      $(".fa-rotate-90").click(function () {
+        $(".fa-rotate-90").hide();
+      });
+
+      $(".fa-rotate-270").click(function () {
+        $(".right-container").animate({
+          width: "toggle"
+        });
+      });
+      $(".fa-rotate-90").click(function () {
+        $(".right-container").animate({
+          width: "toggle"
+        });
+      });
+    });
+
+
+
+  </script>
+
+  <div class="project-container">
+    <header class="header">
+      <div class="logoset">
+        <a href="./loginpage.html" class="logo">Logo</a>
+      </div>
+      <nav class="navigation">
+        <a href="#">
+          <span>Chemistry</span>
+        </a>
+
+        <a href="#">
+          <span>Physics</span>
+        </a>
+
+        <a href="#">
+          <span>Embedded</span>
+        </a>
+
+        <a href="#">
+          <span>Learning center</span>
+        </a>
+        <a href="#">
+          <span class="res">Resources</span>
+        </a>
+      </nav>
+      <!-- for user account -->
+      <ul class="test">
+        <li>
+          <a href="#">
+            <span>Blogs</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span>Tips & Tricks</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span>Lesson plans</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span>Help center</span>
+          </a>
+        </li>
+      </ul>
+      <div class="input-user">
+        <input type="text" placeholder="Search...." id="search-box" style="padding: 0px 20px;" />
+        <label for="search-box">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </label>
+        <button class="user-btn"><i class="fa-solid fa-user"></i></button>
+      </div>
+    </header>
+    <div class="user-info-container">
+      <a href="#">
+        <li class="N-M"><i class="fa-solid fa-user"></i><span> name</span></li>
+      </a>
+      <a href="#">
+        <li class="xyz"><i class="fa-solid fa-plus"></i><span> New Design</span></li>
+      </a>
+      <a href="#">
+        <li class="xyz"><i class="fa-solid fa-cubes"></i><span> My Design</span></li>
+      </a>
+      <a href="#">
+        <li class="xyz"><i class="fa-solid fa-envelope"></i><span> Notifications</span></li>
+      </a>
+      <a href="#">
+        <li class="xyz"><i class="fa-solid fa-gear"></i><span>Profile</span></li>
+      </a>
+      <a href="#">
+        <li class="xyz"><i class="fa-solid fa-circle-xmark"></i><span>Log Out</span></li>
+      </a>
+    </div>
+    <div class="right-container">
+      <input type="text" placeholder="Serach....." id="search-component" style="padding: 0px 20px;" />
+      <label for="search-component">
+        <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
+      </label>
+
+      <div class="component-box" style="color: black; font-size: 10px;">
+        <!-- <div class="img-box"><span>Arduino&LED</span><img class="dro" id="drage1" draggable="true" ondragstart="drag(event)" src="../static/images/FS.png" height="90" width="50" alt=""></div> -->
+        <div class="img-box"><span>Arduino&LED</span><img id="ard" src="../images/t725 icon.png" height="75" width="75"
+            alt="" style="margin-top: 0px ;"></div>
+        <div class="img-box"><span>Arduino</span><img src="../images/arduinoUnoR3 icon.png" height="70" width="70"
+            alt="" style="margin-top:15px ;"></div>
+        <div class="img-box"><span>DHT11</span><img src="../images/DHT.png" height="90" width="50" alt=""></div>
+        <div class="img-box"><span>4 pin IC</span><img src="../images/ic4.png" height="90" width="50" alt=""></div>
+        <div class="img-box"><span>Servo with Arduino</span><img id="servo" src="../images/motorServoDFRobotKit.png" height="80"
+            width="90" alt=""></div>
+        <div class="img-box"><span>Sound</span><img src="../images/BSWITCH.png" height="80" width="50" alt="">
+        </div>
+        <div class="img-box"><span>Piezo buzzer</span><img src="../images/piezo.png"height="75" width="75" alt=""></div>
+        <div class="img-box"><span>Relay</span><img src="../images/relay.png"height="60" width="70" alt="" style="margin-top: 10px; ;"></div>
+        <div class="img-box"><span>Soil moisture</span><img src="../images/sensorSoilMoisture.png" height="75" width="75"alt=""></div>
+        <div class="img-box"><span>Ultrasonic</span><img src="../images/sensorUltrasonicDistance.png"height="75" width="75" alt=""></div>
+        <div class="img-box"><span>TMP</span><img src="../images/TMP.png"height="75" width="75" alt="">
+        </div>
+        <div class="img-box"><span>ZenerDiode</span><img src="../images/zenerd.png"height="75" width="75"alt="">
+        </div>
+        <div class="img-box"><span>Register</span><img src="../images/r1.png" height="60" width="75"alt=""style="margin-top: 10px;"></div>
+        <div class="img-box"><span>PhotoRegister</span><img src="../images/photoregistor.png" height="75" width="50" alt="">
+        </div>
+        <div class="img-box"><span>Mosfat</span><img src="../images/mosf.png" height="50  " width="75"alt="" style="margin-top: 10px;">
+        </div>
+        <div class="img-box"><span>sensor</span><img src="../images/SS.png" height="90" width="50" alt=""></div>
+        <div class="img-box"><span>Dht11</span><img src="../images/DHT.png" height="90" width="50" alt=""></div>
+        <div class="img-box"><span>Diode</span><img src="../images/diode.png" height="50" width="70" alt="" style="margin-top: 20px;"></div>
+        <div class="img-box"><span>Sound</span><img src="../images/BSWITCH.png" height="80" width="50" alt="">
+        </div>
+        <div class="img-box"><span>Piezo buzzer</span><img src="../images/piezo.png"height="75" width="75" alt=""></div>
+        <div class="img-box"><span>Relay</span><img src="../images/relay.png"height="60" width="70" alt="" style="margin-top: 10px; ;"></div>
+        <div class="img-box"><span>Soil moisture</span><img src="../images/sensorSoilMoisture.png" height="75" width="75"alt=""></div>
+        <div class="img-box"><span>Ultrasonic</span><img src="../images/sensorUltrasonicDistance.png"height="75" width="75" alt=""></div>
+        <div class="img-box"><span>TMP</span><img src="../images/TMP.png"height="75" width="75" alt="">
+        </div>
+        <div class="img-box"><span>ZenerDiode</span><img src="../images/zenerd.png"height="75" width="75"alt="">
+        </div>
+        <div class="img-box"><span>Register</span><img src="../images/r1.png" height="60" width="75"alt=""style="margin-top: 10px;"></div>
+        <div class="img-box"><span>PhotoRegister</span><img src="../images/photoregistor.png" height="75" width="50" alt="">
+        </div>
+        <div class="img-box"><span>Mosfat</span><img src="../images/mosf.png" height="50  " width="75"alt="" style="margin-top: 10px;">
+        </div>
+        <div class="img-box"><span>sensor</span><img src="../images/SS.png" height="90" width="50" alt=""></div>
+        <div class="img-box"><span>Dht11</span><img src="../images/DHT.png" height="90" width="50" alt=""></div>
+        <div class="img-box"><span>Diode</span><img src="../images/diode.png" height="50" width="70" alt="" style="margin-top: 20px;"></div>
+        <div class="img-box"><span>Sound</span><img src="../images/BSWITCH.png" height="80" width="50" alt="">
+        </div>
+        <div class="img-box"><span>Piezo buzzer</span><img src="../images/piezo.png"height="75" width="75" alt=""></div>
+        <div class="img-box"><span>Relay</span><img src="../images/relay.png"height="60" width="70" alt="" style="margin-top: 10px; ;"></div>
+        <div class="img-box"><span>Soil moisture</span><img src="../images/sensorSoilMoisture.png" height="75" width="75"alt=""></div>
+        <div class="img-box"><span>Ultrasonic</span><img src="../images/sensorUltrasonicDistance.png"height="75" width="75" alt=""></div>
+        <div class="img-box"><span>TMP</span><img src="../images/TMP.png"height="75" width="75" alt="">
+        </div>
+        <div class="img-box"><span>ZenerDiode</span><img src="../images/zenerd.png"height="75" width="75"alt="">
+        </div>
+        <div class="img-box"><span>Register</span><img src="../images/r1.png" height="60" width="75"alt=""style="margin-top: 10px;"></div>
+        <div class="img-box"><span>PhotoRegister</span><img src="../images/photoregistor.png" height="75" width="50" alt="">
+        </div>
+        <div class="img-box"><span>Mosfat</span><img src="../images/mosf.png" height="50  " width="75"alt="" style="margin-top: 10px;">
+        </div>
+        <div class="img-box"><span>sensor</span><img src="../images/SS.png" height="90" width="50" alt=""></div>
+        <div class="img-box"><span>Dht11</span><img src="../images/DHT.png" height="90" width="50" alt=""></div>
+        <div class="img-box"><span>Diode</span><img src="../images/diode.png" height="50" width="70" alt="" style="margin-top: 20px;"></div>
+        <div class="img-box"><span>Sound</span><img src="../images/BSWITCH.png" height="80" width="50" alt="">
+        </div>
+        <div class="img-box"><span>Piezo buzzer</span><img src="../images/piezo.png"height="75" width="75" alt=""></div>
+        <div class="img-box"><span>Relay</span><img src="../images/relay.png"height="60" width="70" alt="" style="margin-top: 10px; ;"></div>
+        <div class="img-box"><span>Soil moisture</span><img src="../images/sensorSoilMoisture.png" height="75" width="75"alt=""></div>
+        <div class="img-box"><span>Ultrasonic</span><img src="../images/sensorUltrasonicDistance.png"height="75" width="75" alt=""></div>
+        <div class="img-box"><span>TMP</span><img src="../images/TMP.png"height="75" width="75" alt="">
+        </div>
+        <div class="img-box"><span>ZenerDiode</span><img src="../images/zenerd.png"height="75" width="75"alt="">
+        </div>
+        <div class="img-box"><span>Register</span><img src="../images/r1.png" height="60" width="75"alt=""style="margin-top: 10px;"></div>
+        <div class="img-box"><span>PhotoRegister</span><img src="../images/photoregistor.png" height="75" width="50" alt="">
+        </div>
+        <div class="img-box"><span>Mosfat</span><img src="../images/mosf.png" height="50  " width="75"alt="" style="margin-top: 10px;">
+        </div>
+        <div class="img-box"><span>sensor</span><img src="../images/SS.png" height="90" width="50" alt=""></div>
+        <div class="img-box"><span>Dht11</span><img src="../images/DHT.png" height="90" width="50" alt=""></div>
+        <div class="img-box"><span>Diode</span><img src="../images/diode.png" height="50" width="70" alt="" style="margin-top: 20px;"></div>
+        
+      </div>
+    </div>
+    <i class="fa-solid fa-caret-up fa-rotate-270"></i>
+    <i class="fa-solid fa-caret-up fa-rotate-90"></i>
+  </div>
+  <div class="container" id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+    <!-- <div class="s" id="d"></div> -->
+    <div id="simu">
+      <img id="d" src="../images/t725.gif" alt="" style="width: 100%; height: 100%;">
+    </div>
+    <div id="simu2" >
+      <img src="../images/ard.gif" id="f" alt="" style="width: 100%; height: 100%;">
+    </div>
+    <div id="simu3" >
+      <img src="../images/servowArd.png" id="f" alt="" style="width: 100%; height: auto;">
+    </div>
+    <div id="simu3-1" style="background: #f4f4f4;" >
+      <img src="../images/servorun.gif" id="f" alt="" style="width: 100%; height: auto;">
+      <!-- <video src="../images/servorun.gif" style="width: 100%; height: auto;" autoplay loop  ></video> -->
+    </div>
+    <div class="components-nav">
+      <button class="Code" type="submit">Code</button>
+      <!-- <button class="servocode" onclick="insertcode()" type="submit">servo</button> -->
+      <div class="dropdown">
+        <button class="dropbtn">Dropdown</button>
+        <div class="dropdown-content">
+        <a href="#" onclick="insertled()">LED blink</a>
+        <a href="#" onclick="insertservo()">Arduino with servo</a>
+        <a href="#">Arduino with buzzer</a>
+        </div>
+      </div>
+      
+      <!-- left container for codepanal -->
+      <div class="left-container">
+
+        <textarea cols="30" rows="10" type="text" id="imageUrlInput" placeholder="insert the code"></textarea>
+        <div class="btn-S">
+          <button onclick="showImage()">Start Simulation</button>
+          <!-- <div id="simu2"></div> -->
+        </div>
+      </div>
+
+    </div>
+  </div>
+  </div>
+  <script>
+    // for insert code
+    function insertled(){
+      var serv = document.getElementById('imageUrlInput').value =`void setup()
+{
+  pinMode(12, OUTPUT);
+}
+
+void loop()
+{
+ 
+  digitalWrite(12, HIGH);
+  delay(5000); 
+  
+  digitalWrite(12, LOW);
+  delay(50000); 
+}` 
+    }
+    function insertservo(){
+      var serv = document.getElementById('imageUrlInput').value = `
+#include 
+<Servo.h> int pos = 0;
+
+Servo myservo;
+
+void setup(){
+  myservo.attach(9);
+}
+void loop(){
+  for (pos = 0; pos <=180; pos += 1){
+    myservo.write(pos);
+    delay(15);
+  }
+  
+  for(pos = 180; pos >=0; pos -= 1){
+    myservo.write(pos);
+    delay(15);
+  }
+}`
+    }
+
+
+    // for inputfield
+    function showImage() {
+      // Get the input value
+      if (imageUrl = document.getElementById('imageUrlInput').value) {
+        
+        var imageUrl = document.getElementById("imageUrlInput").innerHTML = "../images/ard.gif";
+      }
+
+      // Create an image element
+      var imgElement = document.createElement("img");
+
+      // Set the source attribute of the image element
+      imgElement.src = imageUrl;
+
+      // Set some styling for the image (optional)
+      imgElement.style.maxWidth = "100%";
+      imgElement.style.height = "auto";
+
+      // Get the container where the image will be displayed
+      var simu2 = document.getElementById("simu2");
+
+      // Clear previous content in the container
+      simu2.innerHTML = "";
+
+      // Append the image element to the container
+      simu2.appendChild(imgElement);
+    }
+    // ####################
+    // for dragable
+    $(function () {
+      // $( "#drage1" ).draggable();
+      $("#simu").draggable();
+      $("#simu2").draggable();
+      $("#simu3").draggable();
+      $("#simu3-1").draggable();
+    });
+    // for #arduino sho hide
+    $(document).ready(function () {
+      // $("#hide").click(function(){
+      //   $("p").hide();
+      // });
+      $("#ard").click(function () {
+        $("#simu").show();
+        $(".btn-S").click(function () {
+          $("#simu").hide();
+          alert("Compilation has complited.......")
+          $("#simu2").show();
+        });
+      });
+      $("#servo").click(function (){
+        $("#simu3").show();
+        $(".btn-S").click(function (){
+          $("#simu3").hide();
+          $("#simu3-1").show();
+        })
+      })
+    });
+
+    // for code panale slide
+    $(document).ready(function () {
+      $(".Code").click(function () {
+        $(".left-container").animate({
+          width: "toggle"
+        });
+      });
+    });
+
+
+  </script>
+  <!-- div for create new design -->
+  <script src="../js/loginpage.js"></script>
+  <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"></script>
+</body>
+</html>

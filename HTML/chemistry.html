@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="../css/chemistry.css">
+	<link rel="stylesheet" href="../css/createproject.css">
+	<title>Virtual Labs Dei-Electroanalytical Virtual Laboratory</title>
+	<script src="../js/jquery-3.6.0.min.js"></script>      
+
+<script>
+$(document).ready(function(){
+         $('#cuso41n').attr('disabled', 'disabled');
+		 $('#saltbridagen').attr('disabled', 'disabled');
+		 $('#rodn').attr('disabled', 'disabled');
+		 $('#voltametern').attr('disabled', 'disabled');
+		 $('#cuso41nao').attr('disabled', 'disabled');
+		 
+    $('#cuso41n').click(function(){
+    	var cuso41value = $(this).val();
+		
+		$(".followstep1").removeClass("active");
+		$(".followstep2").addClass("active");
+        $("#step3").hide();
+        $("#step2").show();
+		 $('#cuso41n').attr('disabled', 'disabled');
+		 $('#cu1n').attr('disabled', 'disabled');
+		 $('#saltbridagen').removeAttr('disabled', 'disabled');
+		 $('#rodn').attr('disabled', 'disabled');
+		 $('#voltametern').attr('disabled', 'disabled');
+		 $('#cuso41nao').attr('disabled', 'disabled');
+		$("#step2img").attr("src","../images/step2.gif");
+		setTimeout(function() {
+		$("#saltbridage").show();
+    
+             //$("#step2img").attr("src","/images/step2f.png");
+			  
+            }, 10000);
+	
+    });
+	$('#cu1n').click(function(){
+    	var cuso41value = $(this).val(); 
+		
+		$(".followstep2").removeClass("active");
+		$(".followstep3").addClass("active");
+        $("#step1").hide();
+        $("#step2").hide();
+		 $("#step3").show();
+		 $('#cu1n').attr('disabled', 'disabled');
+		 $('#cuso41n').removeAttr('disabled', 'disabled');
+		 $('#saltbridagen').attr('disabled', 'disabled');
+		 $('#rodn').attr('disabled', 'disabled');
+		 $('#voltametern').attr('disabled', 'disabled');
+		 $('#cuso41nao').attr('disabled', 'disabled');
+		 
+		$("#step3img").attr("src","../images/Step1.gif");
+		setTimeout(function() {
+		
+    $("#cu1").show();
+            // $("#step3img").attr("src","images/step1f.png");
+            }, 15000);
+
+    });
+	$("#saltbridagen").click(function(){
+    	$(".followstep3").removeClass("active");
+		$(".followstep4").addClass("active");
+        $("#step1").hide();
+        $("#step2").hide();
+		$("#step3").hide();
+		$("#step4").show();
+		$('#cuso41n').attr('disabled', 'disabled');
+		 $('#cu1n').attr('disabled', 'disabled');
+		 $('#rodn').removeAttr('disabled', 'disabled');
+		 $('#saltbridagen').attr('disabled', 'disabled');
+		 $('#voltametern').attr('disabled', 'disabled');
+		 $('#cuso41nao').attr('disabled', 'disabled');
+		$("#step4img").attr("src","..//images/step4.gif");
+		setTimeout(function() {
+      $("#rod").show();
+             //$("#step4img").attr("src","images/step4f.png");
+            }, 7000);
+    });
+	$("#rodn").click(function(){
+    	$(".followstep4").removeClass("active");
+		$(".followstep5").addClass("active");
+        $("#step1").hide();
+        $("#step2").hide();
+		$("#step3").hide();
+		$("#step4").hide();
+		$("#step5").show();
+		$('#cuso41n').attr('disabled', 'disabled');
+		 $('#cu1n').attr('disabled', 'disabled');
+		 $('#voltametern').removeAttr('disabled', 'disabled');
+		 $('#saltbridagen').attr('disabled', 'disabled');
+		 $('#rodn').attr('disabled', 'disabled');
+		 $('#cuso41nao').attr('disabled', 'disabled');
+		$("#step5img").attr("src","../images/step5.gif");
+		setTimeout(function() {
+    $("#voltameter").show();
+            // $("#step5img").attr("src","images/step5f.png");
+            }, 8000);
+    });
+	$("#voltametern").click(function(){
+    	$(".followstep5").removeClass("active");
+		$(".followstep6").addClass("active"); 
+        $("#step1").hide();
+        $("#step2").hide();
+		$("#step3").hide();
+		$("#step4").hide();
+		$("#step5").hide();
+		$("#step6").show();
+		$('#cuso41n').attr('disabled', 'disabled');
+		 $('#cu1n').attr('disabled', 'disabled');
+		 $('#cuso41nao').attr('disabled', 'disabled');
+		 $('#saltbridagen').attr('disabled', 'disabled');
+		 $('#rodn').attr('disabled', 'disabled');
+		 $('#voltametern').attr('disabled', 'disabled');
+		$("#step6img").attr("src","../images/step6.gif");
+		setTimeout(function() {
+       $("#onvoltameter").show();
+            // $("#step6img").attr("src","images/step6f.png");
+            }, 8000);
+    });
+	$("#cuso41nao").click(function(){
+    	$(".followstep5").removeClass("active");
+		$(".followstep6").addClass("active"); 
+        $("#step1").hide();
+        $("#step2").hide();
+		$("#step3").hide();
+		$("#step4").hide();
+		$("#step5").hide();
+		$("#step6").hide();
+		$("#step7").hide();
+		$("#step8").show();
+		 $('#cuso41n').attr('disabled', 'disabled');
+		 $('#cu1n').attr('disabled', 'disabled');
+		 $('#cuso41nao').attr('disabled', 'disabled');
+		 $('#saltbridagen').attr('disabled', 'disabled');
+		 $('#rodn').attr('disabled', 'disabled');
+		 $('#voltametern').attr('disabled', 'disabled');
+		//$("#step8img").css("padding", "6px 10px");
+		$("#step8img").attr("src","../images/IInPartNa2s.gif");
+		setTimeout(function() {
+    
+             $("#rank1").show();
+            }, 5000);
+			 setTimeout(function() {
+		        $("#rank1").text("-0.90 V");
+		   }, 6000);
+		    setTimeout(function() {
+		        $("#rank1").text("-0.80 V");
+		   }, 8000);
+		     setTimeout(function() {
+		        $("#rank1").text("-0.70 V");
+		   }, 11000);
+		     setTimeout(function() {
+		        $("#rank1").text("-0.60 V");
+		   }, 13000);
+		     setTimeout(function() {
+		        $("#rank1").text("-0.50 V");
+				
+				//$("#step8img").attr("src","images/IInPartOnStartClick.gif");
+		   }, 14000);
+		    setTimeout(function() {
+		        $("#rank1").text("-0.40 V");
+		   }, 15000);
+		    setTimeout(function() {
+		        $("#rank1").text("-0.30 V");
+		   }, 16000);
+		    setTimeout(function() {
+		        $("#rank1").text("-0.20 V");
+		   }, 17000);
+		    setTimeout(function() {
+		        $("#rank1").text("-0.10 V");
+		   }, 18000);
+		    setTimeout(function() {
+		        $("#rank1").text("+0.00 V");
+				$("#onvoltameter2").hide();
+				$("#step8img").css("padding", "0px 10px");
+				$("#rank1").css("top", "34%");
+				$("#step8img").attr("src","../images/step9f.png");
+				$("#success1").show();
+		   }, 19000);
+    });
+	$("#off").click(function(){
+	$("#rank").show();
+    	$(".followstep6").removeClass("active");
+		$(".followstep7").addClass("active"); 
+        $("#step1").hide();
+        $("#step2").hide();
+		$("#step3").hide();
+		$("#step4").hide();
+		$("#step5").hide();
+		$("#step6").hide();
+		$("#step7").show();
+        $('#cuso41n').attr('disabled', 'disabled');
+		 $('#cu1n').attr('disabled', 'disabled');
+		 $('#cuso41nao').removeAttr('disabled', 'disabled');
+		 $('#saltbridagen').attr('disabled', 'disabled');
+		 $('#rodn').attr('disabled', 'disabled');
+		 $('#voltametern').attr('disabled', 'disabled');
+		  $("#step7img").attr("src","../images/step7.gif");
+		  
+		    setTimeout(function() {
+		        $("#rank").text("+0.50 V");
+		   }, 1000);
+		      setTimeout(function() {
+		        $("#rank").text("+0.49 V");
+		   }, 2000);
+		      setTimeout(function() {
+		       $("#rank").text("+0.48 V");
+		   }, 3000);
+		      setTimeout(function() {
+		       $("#rank").text("+0.47 V");
+		   }, 4000);
+		      setTimeout(function() {
+		        $("#rank").text("+0.46 V");
+		   }, 5000);
+		    setTimeout(function() {
+		        $("#rank").text("+0.45 V");
+		   }, 6000);
+		      setTimeout(function() {
+		        $("#rank").text("+0.44 V");
+		   }, 7000);
+		      setTimeout(function() {
+		       $("#rank").text("+0.43 V");
+		   }, 8000);
+		      setTimeout(function() {
+		       $("#rank").text("+0.42 V");
+		   }, 9000);
+		      setTimeout(function() {
+		        $("#rank").text("+0.41 V");
+		   }, 10000);
+		   
+		   
+		    setTimeout(function() {
+		        $("#rank").text("+0.40 V");
+		   }, 11000);
+		      setTimeout(function() {
+		        $("#rank").text("+0.39 V");
+		   }, 12000);
+		      setTimeout(function() {
+		       $("#rank").text("+0.38 V");
+		   }, 13000);
+		      setTimeout(function() {
+		       $("#rank").text("+0.37 V");
+		   }, 14000);
+		      setTimeout(function() {
+		        $("#rank").text("+0.36 V");
+		   }, 15000);
+		    setTimeout(function() {
+		        $("#rank").text("+0.35 V");
+		   }, 16000);
+		      setTimeout(function() {
+		        $("#rank").text("+0.34 V");
+		   }, 17000);
+		      setTimeout(function() {
+		       $("#rank").text("+0.33 V");
+		   }, 18000);
+		      setTimeout(function() {
+		       $("#rank").text("+0.32 V");
+		   }, 19000);
+		      setTimeout(function() {
+		        $("#rank").text("+0.31 V");
+		   }, 20000);
+		   
+		    setTimeout(function() {
+		        $("#rank").text("+0.30 V");
+		   }, 21000);
+		      setTimeout(function() {
+		        $("#rank").text("+0.29 V");
+		   }, 22000);
+		      setTimeout(function() {
+		       $("#rank").text("+0.28 V");
+		   }, 23000);
+		      setTimeout(function() {
+		       $("#rank").text("+0.27 V");
+		   }, 24000);
+		      setTimeout(function() {
+		        $("#rank").text("+0.26 V");
+		   }, 25000);
+		    setTimeout(function() {
+		        $("#rank").text("+0.25 V");
+		   }, 26000);
+		      setTimeout(function() {
+		        $("#rank").text("+0.24 V");
+		   }, 27000);
+		      setTimeout(function() {
+		       $("#rank").text("+0.23 V");
+		   }, 28000);
+		      setTimeout(function() {
+		       $("#rank").text("+0.22 V");
+		   }, 29000);
+		      setTimeout(function() {
+		        $("#rank").text("+0.21 V");
+		   }, 30000);
+		   
+		   
+		   setTimeout(function() {
+		        $("#rank").text("+0.20 V");
+		   }, 31000);
+		      setTimeout(function() {
+		        $("#rank").text("+0.19 V");
+		   }, 32000);
+		      setTimeout(function() {
+		       $("#rank").text("+0.18 V");
+		   }, 33000);
+		      setTimeout(function() {
+		       $("#rank").text("+0.17 V");
+		   }, 34000);
+		      setTimeout(function() {
+		        $("#rank").text("+0.16 V");
+		   }, 35000);
+		    setTimeout(function() {
+		        $("#rank").text("+0.15 V");
+		   }, 36000);
+		      setTimeout(function() {
+		        $("#rank").text("+0.14 V");
+		   }, 37000);
+		      setTimeout(function() {
+		       $("#rank").text("+0.13 V");
+		   }, 38000);
+		      setTimeout(function() {
+		       $("#rank").text("+0.12 V");
+		   }, 39000);
+		      setTimeout(function() {
+		        $("#rank").text("+0.11 V");
+		   }, 40000);
+		   
+		   
+		    setTimeout(function() {
+		        $("#rank").text("+0.10 V");
+		   }, 41000);
+		      setTimeout(function() {
+		        $("#rank").text("+0.09 V");
+		   }, 42000);
+		      setTimeout(function() {
+		       $("#rank").text("+0.07 V");
+		   }, 43000);
+		      setTimeout(function() {
+		       $("#rank").text("+0.06 V");
+		   }, 47000);
+		      setTimeout(function() {
+		        $("#rank").text("+0.05 V");
+		   }, 50000);
+		    setTimeout(function() {
+		        $("#rank").text("+0.04 V");
+		   }, 53000);
+		      setTimeout(function() {
+		        $("#rank").text("+0.03 V");
+		   }, 55000);
+		      setTimeout(function() {
+		       $("#rank").text("+0.02 V");
+		   }, 60000);
+		      setTimeout(function() {
+		       $("#rank").text("+0.01 V");
+		   }, 65000);
+		      setTimeout(function() {
+			   $("#onvoltameter1").hide();
+		        $("#rank").text("+0.00 V");
+				  //$("#step7img").css("padding", "12px 12px");
+				 //$("#step7img").attr("src","images/lastenjoy.png");
+				$("#success").show();
+		   }, 69000);
+		
+    });
+	$("#resetn").click(function(){
+    	 
+        $("#header").hide();
+		$("#rank").hide();
+		$("#rank1").hide();
+        $("#navigation-bar").hide();
+		$("#navbar").hide();
+		 $("#head_area").hide();
+		$(".navigation-bar").hide();
+		$(".max").hide();
+		$(".rightsidebarn").hide();
+		$(".rightsidebar").show();
+		$("#step1").show();
+		$("#step2").hide();
+		$("#step3").hide();
+		$("#step4").hide();
+		$("#step5").hide();
+		$("#step6").hide();
+		$("#step7").hide();
+		$("#step8").hide();
+		$("#cuso41").show();
+		$("#step8img").css("padding", "0px");
+		$('#cuso41n').attr('disabled', 'disabled');
+		 $('#saltbridagen').attr('disabled', 'disabled');
+		 $('#rodn').attr('disabled', 'disabled');
+		 $('#voltametern').attr('disabled', 'disabled');
+		 $('#cuso41nao').attr('disabled', 'disabled');
+        $('#cu1n').removeAttr('disabled', 'disabled');
+		$("#main-sec").css("width", "100%");
+		$(".des").css("width", "77%");
+		$(".des").css("text-align", "center");
+    });
+	$(".max").click(function(){
+ 
+        $("#header").hide();
+		$("#rank").hide();
+		$("#rank1").hide();
+        $("#navigation-bar").hide();
+		$("#navbar").hide();
+		 $("#head_area").hide();
+		$(".navigation-bar").hide();
+		$(".max").hide();
+		$(".rightsidebarn").hide();
+		$(".rightsidebar").show();
+		$("#cuso41").show();
+		$('#cuso41n').attr('disabled', 'disabled');
+		 $('#saltbridagen').attr('disabled', 'disabled');
+		 $('#rodn').attr('disabled', 'disabled');
+		 $('#voltametern').attr('disabled', 'disabled');
+		 $('#cuso41nao').attr('disabled', 'disabled');
+        $('#cu1n').removeAttr('disabled', 'disabled');
+		$("#main-sec").css("width", "100%");
+		$(".des").css("width", "77%");
+		$(".des").css("text-align", "center");
+
+    });
+	$("#skip").click(function(){
+ 
+       $("#head_area").show();
+        $("#header").show();
+		$("#rank").hide();
+		$("#rank1").hide();
+        $("#navigation-bar").show();
+		$("#navbar").show();
+		$(".navigation-bar").show();
+		$(".max").show();
+		$(".rightsidebarn").show();
+		$(".rightsidebar").hide();
+		$("#main-sec").css("width", "");
+		$(".des").css("width", "");
+		$(".des").css("text-align", "center");
+		$("#step1").show();
+
+    });
+});
+</script> 
+</head>
+<body>
+	<div class="main-container">
+		<header class="header">
+		  <div class="logoset">
+		  <a href="./loginpage.html" class="logo">Logo</a>
+		</div>
+		<nav class="navigation">
+		  <a href="./chemistry.html">
+			<span>Chemistry</span>
+		  </a>
+  
+		  <a href="#">
+			<span>Physics</span>
+		  </a>
+		  
+		  <a href="./createproject.html">
+			<span>Embedded</span>
+		  </a>
+		  
+		  <a href="#">
+			<span>Learning center</span>
+		  </a>
+		  <a href="#">
+			<span class="res">Resources</span>
+		  </a>
+		</nav>
+		<ul class="test">
+		  <li>
+			<a href="#">
+			  <span>Blogs</span>
+			</a>
+		  </li>
+		  <li>
+			<a href="#">
+			  <span>Tips & Tricks</span>
+			</a>
+		  </li>
+		  <li>
+			<a href="#">
+			  <span>Lesson plans</span>
+			</a>
+		  </li>
+		  <li>
+			<a href="#">
+			  <span>Help center</span>
+			</a>
+		  </li>
+		</ul>
+		<!-- <div class="loginbtn">
+		  <button class="Loginbtn-popup">Log In</button>
+		  <button class="SignInbtn-popup">Sign In</button>
+		</div> -->
+	  </header>
+	  <!-- ########### header ################### -->
+	
+		<main class="main-section" id="main-sec">
+		<div class="heading" id="head_area">
+			<h1>1.Electrolytic Concentration Cell.</h1>
+		</div>
+		<div  class="des" id="des">
+		    <!-- Begin step1-->
+			 <div id="step1">
+	
+                  <div style="display: block;height:10px;text-align: center;"> <a href="javascript:void(0);" class="blink" id="cuso41" style="display:none;">Step 1 : In Beaker-A fill <strong>CuSO<sub>4</sub></strong> (0.20M) Solution.</a></div>
+				
+				<div id="rightsidebarn" class="rightsidebarn">
+						<a href="javascript:void(0);" class="max" >Maximize The Window</a>
+						
+						</div>	
+				
+				<p>
+				<img src="../images/step1.png" style="width:640px;height:480px;">
+				</p>
+			 </div>
+			 <!-- End step1-->
+			 <!-- Begin step2-->
+			 <div id="step2" style="display:none;">
+			
+				 <div style="display: block;height:10px;text-align: center;"> <a href="javascript:void(0);" id="saltbridage" style="display:none;" class="blink">Step 3 : Connect the Salt Bridge.</a></div>
+
+			 
+				<p>
+				<img src=""  id="step2img" style="width:640px;height:480px;">
+				</p>
+			 </div>
+			 <!-- End step2-->
+			  <!-- Begin step3-->
+			 <div id="step3" style="display:none;">
+			  <div style="display: block;height:10px;text-align: center;"> <a href="javascript:void(0);" class="blink" id="cu1" style="display:none;">
+			   Step 2 : In Beaker-B fill <strong>CuSO<sub>4</sub></strong> (0.10M) Solution.</a></div>
+				
+				<p>
+				<img src="" id="step3img" style="width:640px;height:480px;">
+				</p>
+			 </div>
+			 <!-- End step3-->
+			  <!-- Begin step4-->
+			 <div id="step4" style="display:none;">
+			
+				 <div style="display: block;height:10px;text-align: center;"> <a href="javascript:void(0);" id="rod" class="blink" style="display:none;">
+				Step 4: Insert Copper electrodes.</a></div>
+				<p>
+				<img src=""  id="step4img" style="width:640px;height:480px;">
+				</p>
+			 </div>
+			 <!-- End step4-->
+			  <!-- Begin step5-->
+			 <div id="step5" style="display:none;">
+			
+				 <div style="display: block;height:10px;text-align: center;"> <a href="javascript:void(0);" id="voltameter" class="blink" style="display:none;">Step 5 : Connect the Voltameter.</a></div>
+				<p>
+				<img src=""  id="step5img" style="width:640px;height:480px;">
+				</p>
+			 </div>
+			 <!-- End step5-->
+			   <!-- Begin step6-->
+			 <div id="step6" style="display:none;">
+			
+				 <div style="display: block;height:10px;text-align: center;"> <a href="javascript:void(0);" id="onvoltameter" class="blink" style="display:none;">Step 6 : Switch on the Voltameter.</a></div>
+				<p>
+				<span id="off"></span><img src=""  id="step6img" style="width:640px;height:480px;">
+				</p>
+			 </div>
+			 <!-- End step6-->
+			   <!-- Begin step7-->
+			 <div id="step7" style="display:none;">
+			
+			    <div style="display: block;text-align: center;height: 25px;"> <a href="javascript:void(0);" id="onvoltameter1" class="blink">Working....</a> <span id="success" style="display:none;" class="blink">Part B- Step 7 :  Add Na<sub>2</sub>S solution in Beaker-A.</span></div>
+				<p>
+				<span id="rank"></span>
+				<img src=""  id="step7img" style="width:640px;height:480px;">
+				</p>
+			 </div>
+			 <!-- End step7-->
+		        <!-- Begin step8-->
+			 <div id="step8" style="display:none;">
+			
+			     <div style="display: block;height:70px;text-align: center;"> <a href="javascript:void(0);" id="onvoltameter2" class="blink"></a><span id="success1" style="color:red;display:none;">Experiment has been completed.</span></div> 
+				<p>
+				<span id="rank1" style="display:none;">-1.00 V</span>
+				<img src=""  id="step8img" style="width:640px;height:480px;">
+				</p>
+			 </div>
+			 <!-- End step8-->
+		</div>
+		<div id="rightsidebar" class="rightsidebar" style="display:none;">
+			<a href="javascript:void(0);" id="skip">Skip Full Screen</a><a href="javascript:void(0);"  id="resetn">Reset</a>
+			
+			<a href="javascript:void(0);" id="cu1n"><img src="../images/BekerA.png"></a>
+			<a href="javascript:void(0);" id="cuso41n"><img src="../images/BeakerB.png"></a>
+			<a href="javascript:void(0);" id="saltbridagen"><img src="../images/saltbridge.png"></a>
+			<a href="javascript:void(0);" id="rodn"><img src="../images/Copperod.png"></a>
+			<a href="javascript:void(0);" id="voltametern"><img src="../images/Voltameter.png"></a>
+			<a href="javascript:void(0);" id="cuso41nao"><img src="../images/n2so4.png"></a>
+			</div>
+		</main>
+	</section>
+</body>
+</html>
